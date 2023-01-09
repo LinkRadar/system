@@ -5,19 +5,23 @@
   </div>
 </template>
 <script>
-import { store } from "./store"
+import { store } from "./user"
 import { supabase } from "./data"
 import Auth from "./components/Auth.vue"
 import Profile from "./components/Profile.vue"
-export default {
-  components: {
+export default 
+{
+  components: 
+  {
     Auth,
     Profile,
   },
-
-  setup() {
+  setup() 
+  {
     store.user = supabase.auth.user()
-    supabase.auth.onAuthStateChange((_, session) => {
+
+    supabase.auth.onAuthStateChange((_, session) => 
+    {
       store.user = session.user
     })
 

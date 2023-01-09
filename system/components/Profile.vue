@@ -30,10 +30,10 @@
     </div>
   </form>
 </template>
-
 <script>
+
 import { supabase } from "../data"
-import { store } from "../store"
+import { store } from "../user"
 import { onMounted, ref } from "vue"
 import Avatar from "./Avatar.vue"
 

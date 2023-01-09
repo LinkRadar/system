@@ -28,8 +28,8 @@
     </div>
   </div>
 </template>
-
 <script>
+
 import { ref, toRefs, watch } from "vue"
 import { supabase } from "../data"
 
