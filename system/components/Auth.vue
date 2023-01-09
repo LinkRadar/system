@@ -23,33 +23,36 @@
   </form>
 </template>
 <script>
-
 import { ref } from "vue"
 import { supabase } from "../data"
-
-export default {
-  setup() {
+export default 
+{
+  setup() 
+  {
     const loading = ref(false)
     const email = ref("")
-
-    const handleLogin = async () => {
-      try {
+    const handleLogin = async () => 
+    {
+      try 
+      {
         loading.value = true
         const { error } = await supabase.auth.signIn({ email: email.value })
         if (error) throw error
         alert("Check your email for the login link!")
-      } catch (error) {
+      } 
+      catch (error) 
+      {
         alert(error.error_description || error.message)
-      } finally {
+      } finally 
+      {
         loading.value = false
       }
     }
-
     return {
       loading,
       email,
       handleLogin,
     }
-  },
+  }
 }
 </script>
