@@ -4,7 +4,6 @@
     <Auth v-else />
   </div>
 </template>
-
 <script>
 import { store } from "./store"
 import { supabase } from "./supabase"
