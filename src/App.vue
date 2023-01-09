@@ -6,7 +6,7 @@
 </template>
 <script>
 import { store } from "./store"
-import { supabase } from "./supabase"
+import { supabase } from "./data"
 import Auth from "./components/Auth.vue"
 import Profile from "./components/Profile.vue"
 export default {
